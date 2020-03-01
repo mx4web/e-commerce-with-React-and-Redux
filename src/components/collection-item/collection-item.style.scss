@@ -4,6 +4,7 @@
     flex-direction: column;
     height: 350px;
     align-items: center;
+    position: relative;
 
     .image {
         width: 100%;
@@ -28,5 +29,22 @@
 
     .price {
         width: 10%;
+    }
+
+    .inverted {
+        position: absolute;
+        bottom: 80px;
+        opacity: 0.7;
+        display: none;
+    }
+
+    &:hover {
+        .image {
+            opacity: 0.8;
+        }
+        .inverted {
+            opacity: 0.85;
+            display: block;
+        }
     }
 }
