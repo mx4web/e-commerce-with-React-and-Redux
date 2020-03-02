@@ -4,6 +4,7 @@ import storage from 'redux-persist/lib/storage'; //tell redux persist to use loc
 
 import userReducer from './user/user.reducer';
 import cartReducer from './cart/cart.reducer';
+import shopReducer from './shop/shop.reducer';
 
 const persistConfig = {
     key: 'root', //means we want to store things start from root reducer
@@ -14,6 +15,7 @@ const persistConfig = {
 const rootReducer = combineReducers({
     user: userReducer, //user is handled by firebase authentication, no need to persist this
     cart: cartReducer, //we always want to persist cart
+    shop: shopReducer,
 });
 
 export default persistReducer(persistConfig, rootReducer);
